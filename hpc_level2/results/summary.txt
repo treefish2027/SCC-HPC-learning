@@ -1,0 +1,41 @@
+HPC 第二关实验结果汇总
+
+一、Stencil 五点计算
+
+Row-major:
+mean_ms ≈ 9.89
+GFLOP/s ≈ 12.65
+Bandwidth ≈ 16.87 GB/s
+
+Column-major:
+mean_ms ≈ 108.18
+GFLOP/s ≈ 1.15
+Bandwidth ≈ 1.54 GB/s
+
+
+二、GEMM矩阵乘法
+
+Naive:
+mean_ms ≈ 2404
+GFLOP/s ≈ 0.89
+
+Blocked tile=32:
+mean_ms ≈ 309.5
+GFLOP/s ≈ 6.93
+
+Blocked tile=64:
+mean_ms ≈ 356.2
+GFLOP/s ≈ 6.01
+
+Blocked tile=128:
+mean_ms ≈ 313.2
+GFLOP/s ≈ 6.87
+
+
+三、分析
+
+1. Stencil:
+row访问方式连续访问内存，缓存局部性较好，因此速度明显快于column访问。
+
+2. GEMM:
+blocked优化通过分块提高数据复用率，使矩阵块可以更多停留在cache中，因此相比naive实现获得明显加速。
