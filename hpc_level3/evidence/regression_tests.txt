@@ -1,0 +1,21 @@
+PASS threads=1 case=empty
+PASS threads=1 case=single
+PASS threads=1 case=fewer_records_than_threads
+PASS threads=1 case=uneven_blocks
+PASS threads=1 case=duplicates_and_reverse_order
+PASS threads=2 case=empty
+PASS threads=2 case=single
+PASS threads=2 case=fewer_records_than_threads
+PASS threads=2 case=uneven_blocks
+PASS threads=2 case=duplicates_and_reverse_order
+PASS threads=3 case=empty
+PASS threads=3 case=single
+PASS threads=3 case=fewer_records_than_threads
+PASS threads=3 case=uneven_blocks
+PASS threads=3 case=duplicates_and_reverse_order
+PASS threads=8 case=empty
+PASS threads=8 case=single
+PASS threads=8 case=fewer_records_than_threads
+PASS threads=8 case=uneven_blocks
+PASS threads=8 case=duplicates_and_reverse_order
+OK: 40 program checks passed
