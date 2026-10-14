@@ -1,0 +1,7 @@
+implementation=openmp threads_max=8 generator=v1 source=generated count=1000000 sizeof_record=24 seed=2026 pattern=random requested_hit_percent=50 begin=1000 end=2000 min_latency=100 flags=3 warmup=1 repeats=5
+sample=0 core_ms=2.627604 matched=500129 check=PASS
+sample=1 core_ms=2.531799 matched=500129 check=PASS
+sample=2 core_ms=2.514406 matched=500129 check=PASS
+sample=3 core_ms=2.811605 matched=500129 check=PASS
+sample=4 core_ms=2.419463 matched=500129 check=PASS
+median_core_ms=2.531799 actual_hit_percent=50.0129 input_Mrecords_per_s=394.9760625
